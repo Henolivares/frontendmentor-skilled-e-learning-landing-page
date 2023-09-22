@@ -1,0 +1,44 @@
+@use '../functions/breakpoints' as *;
+
+.u-btn {
+  cursor: pointer;
+  padding: 0.625rem 1.5rem;
+  color: var(--clr-white);
+  border-radius: 60px;
+
+  @include min-screen(desktop) {
+    padding: 15px 1.875rem;
+  }
+}
+
+.u-primaryBtn {
+  background-color: var(--clr-primary);
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--clr-light-blue);
+  }
+}
+
+.u-secondaryBtn {
+  background: linear-gradient(
+    var(--clr-gradient-1-start),
+    var(--clr-gradient-1-end)
+  );
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.85;
+  }
+}
+
+.u-tertiaryBtn {
+  background: linear-gradient(
+    var(--clr-gradient-2-start),
+    var(--clr-gradient-2-end)
+  );
+  &:hover,
+  &:focus-visible {
+    opacity: 0.75;
+  }
+}

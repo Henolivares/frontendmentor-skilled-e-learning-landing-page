@@ -1,0 +1,33 @@
+@mixin min-screen($breakpoint) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 71.25rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media only screen and (min-width: 23.4375rem) {
+      @content;
+    }
+  }
+}
+
+@mixin max-screen($breakpoint) {
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 48rem) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 71.25rem) {
+      @content;
+    }
+  }
+}

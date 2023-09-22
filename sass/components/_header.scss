@@ -1,0 +1,22 @@
+@use '../functions/breakpoints' as *;
+
+.Header {
+  margin-bottom: 6.25rem;
+  &-logo {
+    width: 90px;
+
+    @include min-screen(desktop) {
+      width: 7.1875rem;
+    }
+  }
+
+  &-nav {
+    padding: 22px 0;
+  }
+
+  &-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

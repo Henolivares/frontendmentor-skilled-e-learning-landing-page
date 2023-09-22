@@ -1,0 +1,17 @@
+.Footer {
+  background-color: var(--clr-primary);
+
+  &-nav {
+    padding: 2.125rem 0;
+  }
+
+  &-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-logo {
+    width: 90px;
+  }
+}

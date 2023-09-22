@@ -1,2 +1,63 @@
+@use '../functions/breakpoints' as *;
+
 :root {
+  --clr-light-blue: hsl(234, 25%, 52%);
+  --clr-dark-blue: hsl(233, 54%, 16%);
+  --clr-gray: hsl(232, 10%, 56%);
+  --clr-dark-pink: hsl(341, 92%, 62%);
+  --clr-light-pink: hsl(341, 100%, 83%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --clr-gradient-1-start: hsl(13, 100%, 64%);
+  --clr-gradient-1-end: hsl(322, 87%, 55%);
+  --clr-gradient-2-start: hsl(237, 100%, 64%);
+  --clr-gradient-2-end: hsl(322, 87%, 55%);
+
+  --clr-body: var(--clr-gray);
+  --clr-primary: var(--clr-dark-blue);
+  --clr-secondary: var(--clr-dark-pink);
+
+  // --fs-heading-xl: 3.5rem;
+  // --fs-heading-l: 2.5rem;
+  // --fs-heading-m: 2rem;
+  // --fs-heading-s: 1.5rem;
+  // --fs-body-m: 1.125rem;
+  // --fs-body-s: 1rem;
+
+  --lh-heading-xl: 1.25;
+  // --lh-heading-l: 3.1875rem;
+  --lh-heading-m: 1.25;
+  --lh-heading-s: 1.16;
+  --lh-body-m: 1.55;
+  // --lh-body-s: 1.75rem;
+
+  --fw-heading-all: 800;
+  --fw-body-m: 500;
+  --fw-body-s: 700;
+}
+
+@supports (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-heading-xl: clamp(2.5rem, 2.177vw + 1.99rem, 3.5rem);
+    --fs-heading-m: clamp(1.5rem, 1.088vw + 1.245rem, 2rem);
+    --fs-heading-s: clamp(1.25rem, 0.544vw + 1.122rem, 1.5rem);
+    --fs-body-m: clamp(1rem, 0.272vw + 0.936rem, 1.125rem);
+  }
+}
+
+@supports not (font-size: clamp(1rem, 1vw, 1rem)) {
+  :root {
+    --fs-heading-xl: 2.5rem;
+    --fs-heading-m: 1.5rem;
+    --fs-heading-s: 1.25rem;
+    --fs-body-m: 1rem;
+  }
+  @media screen and (min-width: 1000px) {
+    :root {
+      --fs-heading-xl: 3.5rem;
+      --fs-heading-m: 2rem;
+      --fs-heading-s: 1.5rem;
+      --fs-body-m: 1.225rem;
+    }
+  }
 }
